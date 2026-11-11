@@ -21,3 +21,6 @@ cabal.project.local
 cabal.project.local~
 .HTF/
 .ghc.environment.*
+
+# Enunciado original (material da disciplina, nao redistribuido)
+docs/*.pdf
