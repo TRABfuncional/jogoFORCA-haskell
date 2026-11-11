@@ -1,0 +1,35 @@
+cabal-version:      2.4
+name:               jogoFORCA-haskell
+version:            1.0.0
+synopsis:           Jogo da Forca em Haskell - Trabalho 2 de Programacao Funcional (PUCRS 2026/2)
+author:             Bernardo Garcia, Luiz Confortin, Marco Antonio De Carli Rodegheri, Roger Rozales Ehlert
+build-type:         Simple
+extra-source-files: README.md, data/palavras.txt
+
+library
+    exposed-modules:  Forca.Estado
+                      Forca.Palavras
+                      Forca.Render
+                      Forca.Jogo
+    hs-source-dirs:   src
+    build-depends:    base   >=4.14 && <5
+                    , random >=1.1
+    default-language: Haskell2010
+    ghc-options:      -Wall
+
+executable forca
+    main-is:          Main.hs
+    hs-source-dirs:   app
+    build-depends:    base   >=4.14 && <5
+                    , jogoFORCA-haskell
+    default-language: Haskell2010
+    ghc-options:      -Wall
+
+test-suite testes
+    type:             exitcode-stdio-1.0
+    main-is:          Spec.hs
+    hs-source-dirs:   test
+    build-depends:    base   >=4.14 && <5
+                    , jogoFORCA-haskell
+    default-language: Haskell2010
+    ghc-options:      -Wall

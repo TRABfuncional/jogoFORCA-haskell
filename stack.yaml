@@ -1,0 +1,6 @@
+# Stack e apenas uma conveniencia para montar o ambiente: o projeto em si e
+# um pacote Cabal comum (ver jogoFORCA-haskell.cabal) e tambem compila com
+# ghc/cabal direto, como pede o enunciado.
+snapshot: lts-23.10
+packages:
+  - .
